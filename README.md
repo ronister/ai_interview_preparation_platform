@@ -58,8 +58,16 @@
    - Open [http://localhost:8000](http://localhost:8000) and start practicing!
 
 
-Tech Stack
-WSL • Django • Claude LLM • React + TypeScript • PostgreSQL • LangChain • django-ai-assistant 
+## 🛠️ Tech Stack
+
+![WSL](https://img.shields.io/badge/WSL-0a97f5?style=for-the-badge&logo=windows&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude-FF6B35?style=for-the-badge&logo=anthropic&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![django-ai-assistant](https://img.shields.io/badge/django--ai--assistant-092E20?style=for-the-badge&logo=django&logoColor=white) 
 
 ## License
 
@@ -69,9 +77,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 * [django-ai-assistant](https://github.com/vintasoftware/django-ai-assistant) - AI assistant integration for Django
 
-📧 Contact
-Project Author: Roni Shternberg
-GitHub: @ronister 
-Email: roni.shternberg@gmail.com
+## 📧 Contact
+
+<div align="center">
+
+**Project Author: Roni Shternberg**
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ronister)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:roni.shternberg@gmail.com)
+
+</div>
 
 Happy coding & good luck with your next Python interview!
