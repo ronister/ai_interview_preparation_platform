@@ -1,0 +1,28 @@
+.practiceContainer {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.chatSection {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--mantine-color-gray-0);
+  border-right: 1px solid var(--mantine-color-gray-2);
+}
+
+.codeSection {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.editorWrapper {
+  flex: 2;
+  min-height: 0;
+}
+
+.outputWrapper {
+  flex: 1;
+  min-height: 0;
+} 

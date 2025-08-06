@@ -1,0 +1,104 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_a7f3d39c [label="0: (global)()" name="App::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_be5dc770 [label="24: Chat()" name="Chat::Chat" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3130252e [label="101: handleCreateMessage()" name="Chat::handleCreateMessage" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_5ed1a6b6 [label="56: loadAssistantAndThreads()" name="Chat::loadAssistantAndThreads" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c25b27f6 [label="13: PracticeScreen()" name="PracticeScreen::PracticeScreen" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4a0cba52 [label="15: MessageItem()" name="QuestionDisplay::MessageItem" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a2c4539b [label="76: getGradeColor()" name="QuestionDisplay::getGradeColor" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_1370ea2c [label="4: UserStats()" name="UserStats::UserStats" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_fc539da4 [label="34: getLevelColor()" name="UserStats::getLevelColor" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_764d000d [label="65: open()" name="djangoAIAssistantAuth::open" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_cd92f4ef [label="88: send()" name="djangoAIAssistantAuth::send" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_94b71858 [label="77: setRequestHeader()" name="djangoAIAssistantAuth::setRequestHeader" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_7cdfb7f0 [label="2: setupDjangoAIAssistantAuth()" name="djangoAIAssistantAuth::setupDjangoAIAssistantAuth" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_9cc5ff6a [label="2: setupNetworkLogging()" name="networkLogger::setupNetworkLogging" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_b81f0acf [label="52: initializePythonBackend()" name="pythonRunner::initializePythonBackend" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_0e2c0b88 [label="3: runPythonCode()" name="pythonRunner::runPythonCode" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a7f3d39c -> node_7cdfb7f0 [color="#F0E442" penwidth="2"];
+node_a7f3d39c -> node_7cdfb7f0 [color="#F0E442" penwidth="2"];
+node_a7f3d39c -> node_9cc5ff6a [color="#F0E442" penwidth="2"];
+node_be5dc770 -> node_3130252e [color="#000000" penwidth="2"];
+node_be5dc770 -> node_5ed1a6b6 [color="#000000" penwidth="2"];
+node_c25b27f6 -> node_b81f0acf [color="#D55E00" penwidth="2"];
+node_c25b27f6 -> node_0e2c0b88 [color="#D55E00" penwidth="2"];
+node_c25b27f6 -> node_0e2c0b88 [color="#D55E00" penwidth="2"];
+node_4a0cba52 -> node_a2c4539b [color="#56B4E9" penwidth="2"];
+node_1370ea2c -> node_fc539da4 [color="#F0E442" penwidth="2"];
+node_764d000d -> node_764d000d [color="#0072B2" penwidth="2"];
+node_cd92f4ef -> node_cd92f4ef [color="#CC79A7" penwidth="2"];
+node_cd92f4ef -> node_94b71858 [color="#CC79A7" penwidth="2"];
+node_94b71858 -> node_94b71858 [color="#000000" penwidth="2"];
+node_94b71858 -> node_94b71858 [color="#000000" penwidth="2"];
+subgraph cluster_aad19557 {
+    node_a7f3d39c;
+    label="File: App";
+    name="App";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_61500141 {
+    node_be5dc770 node_5ed1a6b6 node_3130252e;
+    label="File: Chat";
+    name="Chat";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_528c9074 {
+    node_c25b27f6;
+    label="File: PracticeScreen";
+    name="PracticeScreen";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_0eff7d1d {
+    node_4a0cba52 node_a2c4539b;
+    label="File: QuestionDisplay";
+    name="QuestionDisplay";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_092250d2 {
+    node_1370ea2c node_fc539da4;
+    label="File: UserStats";
+    name="UserStats";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_a9e94bed {
+    node_7cdfb7f0 node_764d000d node_94b71858 node_cd92f4ef;
+    label="File: djangoAIAssistantAuth";
+    name="djangoAIAssistantAuth";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_c28728f9 {
+    node_9cc5ff6a;
+    label="File: networkLogger";
+    name="networkLogger";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_8fa25598 {
+    node_0e2c0b88 node_b81f0acf;
+    label="File: pythonRunner";
+    name="pythonRunner";
+    style="filled";
+    graph[style=dotted];
+};
+}

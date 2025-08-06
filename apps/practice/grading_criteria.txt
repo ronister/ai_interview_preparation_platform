@@ -1,0 +1,59 @@
+Grading Criteria (0-10):
+
+**Grade 0 (Special Case)**
+Reserved exclusively for:
+- Empty code submissions
+- Submissions containing only comments (no executable code)
+
+**Grades 1-10 (For all submissions with executable code)**
+Calculated using ceil(weighted_score * 10) where weighted_score is based on:
+
+**Correctness (40%)
+Based on static code analysis using AI evaluation of:
+- Syntax and structure analysis
+- Algorithm logic review
+- Implementation completeness
+
+Scoring (0-1 scale, converted to 4 points max):
+- 0.8-1.0: Code structure sound, logic follows requirements, all major components implemented
+- 0.5-0.7: Some logical issues or missing components, but core functionality present
+- 0.2-0.4: Significant logical flaws or incomplete implementation
+- 0.0-0.1: Major structural problems or completely incorrect approach
+
+Note: Function names are not penalized for differences. REPL-like execution behavior is expected.
+
+**Code Quality (30%)
+Scoring (0-1 scale, converted to 3 points max):
+- 0.8-1.0: Clean, readable code with proper formatting, meaningful variable names, and clear structure
+- 0.5-0.7: Adequate code quality with minor formatting or naming issues
+- 0.2-0.4: Poor code quality with readability issues, inconsistent formatting
+- 0.0-0.1: Very poor code quality, difficult to read or understand
+
+**Efficiency (20%)
+Scoring (0-1 scale, converted to 2 points max):
+- 0.8-1.0: Optimal solution with excellent time/space complexity
+- 0.5-0.7: Acceptable efficiency, reasonable approach with minor inefficiencies
+- 0.2-0.4: Some inefficiencies present but solution works
+- 0.0-0.1: Highly inefficient solution or poor algorithmic choices
+
+**Sophistication (10%)
+Scoring (0-1 scale, converted to 1 point max):
+- 0.6-1.0: Good sophistication with advanced techniques, elegant solutions, or insightful approaches
+- 0.3-0.5: Some sophistication shown in approach or implementation
+- 0.1-0.2: Basic sophistication, standard approaches used
+- 0.0: No sophistication, very basic implementation
+
+Note: Any submission with executable code (even if it fails all tests) will receive at least grade 1.
+
+-------------------------
+Another option - from the project plan document:
+
+**Correctness (%50)
+
+**Efficiency (%25)
+
+**Cleanliness (%15) (this is like Code Quality)
+
+**Sophistication (%10)
+
+I decided to go with the first option.

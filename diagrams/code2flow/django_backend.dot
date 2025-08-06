@@ -1,0 +1,344 @@
+digraph G {
+concentrate=true;
+splines="ortho";
+rankdir="LR";
+subgraph legend{
+    rank = min;
+    label = "legend";
+    Legend [shape=none, margin=0, label = <
+        <table cellspacing="0" cellpadding="0" border="1"><tr><td>Code2flow Legend</td></tr><tr><td>
+        <table cellspacing="0">
+        <tr><td>Regular function</td><td width="50px" bgcolor='#cccccc'></td></tr>
+        <tr><td>Trunk function (nothing calls this)</td><td bgcolor='#966F33'></td></tr>
+        <tr><td>Leaf function (this calls nothing else)</td><td bgcolor='#6db33f'></td></tr>
+        <tr><td>Function call</td><td><font color='black'>&#8594;</font></td></tr>
+        </table></td></tr></table>
+        >];
+}node_acf31a65 [label="20: get_queryset()" name="admin::UserQuestionAttemptAdmin.get_queryset" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_da73e4a8 [label="21: get_retriever()" name="ai_assistants::DjangoDocsAssistant.get_retriever" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_fa02e2c0 [label="15: __init__()" name="claude_service::ClaudeService.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_1158dd20 [label="27: send_message()" name="claude_service::ClaudeService.send_message" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_3dd2dd61 [label="108: send_structured_message()" name="claude_service::ClaudeService.send_structured_message" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_ce123c13 [label="14: __init__()" name="data_processor::DataProcessor.__init__" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_6d4d9531 [label="78: get_questions_list()" name="data_processor::DataProcessor.get_questions_list" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_17b92d73 [label="25: load_data()" name="data_processor::DataProcessor.load_data" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_aaa0df57 [label="51: sample_questions()" name="data_processor::DataProcessor.sample_questions" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_0d23abe5 [label="105: validate_question_data()" name="data_processor::DataProcessor.validate_question_data" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_08f84e8a [label="0: (global)()" name="difficulty_evaluator::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_4c359c61 [label="27: __init__()" name="difficulty_evaluator::DifficultyEvaluator.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_732fc125 [label="182: _get_difficulty_distribution()" name="difficulty_evaluator::DifficultyEvaluator._get_difficulty_distribution" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_c07299c2 [label="86: _process_single_question()" name="difficulty_evaluator::DifficultyEvaluator._process_single_question" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_4769ba20 [label="138: _save_to_database()" name="difficulty_evaluator::DifficultyEvaluator._save_to_database" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_1d0115bb [label="168: get_processing_summary()" name="difficulty_evaluator::DifficultyEvaluator.get_processing_summary" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_93f9bf05 [label="41: process_questions()" name="difficulty_evaluator::DifficultyEvaluator.process_questions" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_0bd4066c [label="199: main()" name="difficulty_evaluator::main" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_e277b9b3 [label="14: __init__()" name="difficulty_service::DifficultyEvaluationService.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_b56c6c6c [label="54: _create_difficulty_evaluation_prompt()" name="difficulty_service::DifficultyEvaluationService._create_difficulty_evaluation_prompt" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a056063e [label="135: _parse_difficulty_response()" name="difficulty_service::DifficultyEvaluationService._parse_difficulty_response" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_7d9c5d31 [label="18: evaluate_instruction_difficulty()" name="difficulty_service::DifficultyEvaluationService.evaluate_instruction_difficulty" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_f25b147f [label="23: handle()" name="evaluate_difficulty::Command.handle" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0f42a523 [label="31: __init__()" name="grading::PythonGradingEngine.__init__" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_1a8e63e7 [label="337: _evaluate_code_quality()" name="grading::PythonGradingEngine._evaluate_code_quality" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_278e85b2 [label="193: _evaluate_correctness()" name="grading::PythonGradingEngine._evaluate_correctness" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_3394f738 [label="432: _evaluate_efficiency()" name="grading::PythonGradingEngine._evaluate_efficiency" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_3b183232 [label="642: _evaluate_sophistication()" name="grading::PythonGradingEngine._evaluate_sophistication" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_59adde53 [label="866: _generate_overall_feedback()" name="grading::PythonGradingEngine._generate_overall_feedback" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_946ed99d [label="895: _has_duplicate_code()" name="grading::PythonGradingEngine._has_duplicate_code" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_6727e741 [label="887: _has_poor_variable_names()" name="grading::PythonGradingEngine._has_poor_variable_names" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_34beafff [label="917: _is_empty_or_comments_only()" name="grading::PythonGradingEngine._is_empty_or_comments_only" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a8ac0198 [label="35: grade_submission()" name="grading::PythonGradingEngine.grade_submission" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_05539229 [label="0: (global)()" name="instructions_difficulty_eval::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_0be7ae10 [label="33: main()" name="instructions_difficulty_eval::main" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_5dd68917 [label="0: (global)()" name="manage::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_85e53392 [label="7: main()" name="manage::main" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_46fc326f [label="31: as_langchain_document()" name="models::DjangoDocPage.as_langchain_document" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_fb8be39e [label="89: assign_question()" name="models::UserProgress.assign_question" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_a151a3fa [label="123: check_level_change_suggestion()" name="models::UserProgress.check_level_change_suggestion" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_8b679f51 [label="96: clear_current_question()" name="models::UserProgress.clear_current_question" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_e414aa30 [label="159: get_effective_level()" name="models::UserProgress.get_effective_level" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_cf923d18 [label="148: set_manual_level()" name="models::UserProgress.set_manual_level" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_04e21a42 [label="102: update_level()" name="models::UserProgress.update_level" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_201058ca [label="31: create()" name="serializers::RegisterSerializer.create" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_2efd1804 [label="0: (global)()" name="urls::(global)" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_cd32a120 [label="12: get_ai_assistant_urls()" name="urls::get_ai_assistant_urls" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_b7d8b5f2 [label="118: post()" name="views::AIAssistantChatThreadView.post" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_8c9aadef [label="61: get_assistant_id()" name="views::BaseAIAssistantView.get_assistant_id" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_2a7830b2 [label="65: get_context_data()" name="views::BaseAIAssistantView.get_context_data" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_27c86071 [label="36: dispatch()" name="views::HybridAuthMixin.dispatch" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_ff4cdbbb [label="389: abandon_current_question()" name="views::abandon_current_question" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_a2bd9ad4 [label="352: clear_user_progress()" name="views::clear_user_progress" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_936e2599 [label="39: execute_python_code()" name="views::execute_python_code" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_b1ab8041 [label="481: execute_python_code_with_micro_sandbox()" name="views::execute_python_code_with_micro_sandbox" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_60ec06d3 [label="527: execute_python_code_with_timing()" name="views::execute_python_code_with_timing" shape="rect" style="rounded,filled" fillcolor="#cccccc" ];
+node_49b152d0 [label="122: get_next_question()" name="views::get_next_question" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_bdf2da3f [label="582: process_code_for_repl()" name="views::process_code_for_repl" shape="rect" style="rounded,filled" fillcolor="#6db33f" ];
+node_f1ccd2c2 [label="458: run_python_code()" name="views::run_python_code" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_d1872147 [label="79: set_manual_level()" name="views::set_manual_level" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_b92f81da [label="206: submit_solution()" name="views::submit_solution" shape="rect" style="rounded,filled" fillcolor="#966F33" ];
+node_acf31a65 -> node_acf31a65 [color="#0072B2" penwidth="2"];
+node_da73e4a8 -> node_46fc326f [color="#000000" penwidth="2"];
+node_1158dd20 -> node_201058ca [color="#000000" penwidth="2"];
+node_3dd2dd61 -> node_201058ca [color="#E69F00" penwidth="2"];
+node_aaa0df57 -> node_17b92d73 [color="#CC79A7" penwidth="2"];
+node_08f84e8a -> node_0bd4066c [color="#56B4E9" penwidth="2"];
+node_4c359c61 -> node_ce123c13 [color="#E69F00" penwidth="2"];
+node_4c359c61 -> node_e277b9b3 [color="#E69F00" penwidth="2"];
+node_c07299c2 -> node_0d23abe5 [color="#56B4E9" penwidth="2"];
+node_c07299c2 -> node_4769ba20 [color="#56B4E9" penwidth="2"];
+node_c07299c2 -> node_7d9c5d31 [color="#56B4E9" penwidth="2"];
+node_1d0115bb -> node_732fc125 [color="#009E73" penwidth="2"];
+node_93f9bf05 -> node_6d4d9531 [color="#0072B2" penwidth="2"];
+node_93f9bf05 -> node_aaa0df57 [color="#0072B2" penwidth="2"];
+node_93f9bf05 -> node_c07299c2 [color="#0072B2" penwidth="2"];
+node_0bd4066c -> node_4c359c61 [color="#F0E442" penwidth="2"];
+node_0bd4066c -> node_1d0115bb [color="#F0E442" penwidth="2"];
+node_0bd4066c -> node_93f9bf05 [color="#F0E442" penwidth="2"];
+node_e277b9b3 -> node_fa02e2c0 [color="#009E73" penwidth="2"];
+node_7d9c5d31 -> node_1158dd20 [color="#E69F00" penwidth="2"];
+node_7d9c5d31 -> node_b56c6c6c [color="#E69F00" penwidth="2"];
+node_7d9c5d31 -> node_a056063e [color="#E69F00" penwidth="2"];
+node_f25b147f -> node_4c359c61 [color="#CC79A7" penwidth="2"];
+node_f25b147f -> node_1d0115bb [color="#CC79A7" penwidth="2"];
+node_f25b147f -> node_93f9bf05 [color="#CC79A7" penwidth="2"];
+node_0f42a523 -> node_fa02e2c0 [color="#009E73" penwidth="2"];
+node_1a8e63e7 -> node_946ed99d [color="#CC79A7" penwidth="2"];
+node_1a8e63e7 -> node_6727e741 [color="#CC79A7" penwidth="2"];
+node_278e85b2 -> node_1158dd20 [color="#56B4E9" penwidth="2"];
+node_3394f738 -> node_1158dd20 [color="#000000" penwidth="2"];
+node_3b183232 -> node_1158dd20 [color="#56B4E9" penwidth="2"];
+node_a8ac0198 -> node_1a8e63e7 [color="#000000" penwidth="2"];
+node_a8ac0198 -> node_278e85b2 [color="#000000" penwidth="2"];
+node_a8ac0198 -> node_59adde53 [color="#000000" penwidth="2"];
+node_a8ac0198 -> node_59adde53 [color="#000000" penwidth="2"];
+node_a8ac0198 -> node_34beafff [color="#000000" penwidth="2"];
+node_05539229 -> node_0be7ae10 [color="#E69F00" penwidth="2"];
+node_0be7ae10 -> node_4c359c61 [color="#000000" penwidth="2"];
+node_0be7ae10 -> node_1d0115bb [color="#000000" penwidth="2"];
+node_0be7ae10 -> node_93f9bf05 [color="#000000" penwidth="2"];
+node_5dd68917 -> node_85e53392 [color="#CC79A7" penwidth="2"];
+node_2efd1804 -> node_cd32a120 [color="#F0E442" penwidth="2"];
+node_b7d8b5f2 -> node_8c9aadef [color="#56B4E9" penwidth="2"];
+node_2a7830b2 -> node_8c9aadef [color="#56B4E9" penwidth="2"];
+node_27c86071 -> node_27c86071 [color="#E69F00" penwidth="2"];
+node_27c86071 -> node_27c86071 [color="#E69F00" penwidth="2"];
+node_ff4cdbbb -> node_a151a3fa [color="#009E73" penwidth="2"];
+node_ff4cdbbb -> node_8b679f51 [color="#009E73" penwidth="2"];
+node_ff4cdbbb -> node_04e21a42 [color="#009E73" penwidth="2"];
+node_ff4cdbbb -> node_201058ca [color="#009E73" penwidth="2"];
+node_a2bd9ad4 -> node_8b679f51 [color="#F0E442" penwidth="2"];
+node_936e2599 -> node_b1ab8041 [color="#E69F00" penwidth="2"];
+node_936e2599 -> node_60ec06d3 [color="#E69F00" penwidth="2"];
+node_b1ab8041 -> node_bdf2da3f [color="#E69F00" penwidth="2"];
+node_60ec06d3 -> node_bdf2da3f [color="#009E73" penwidth="2"];
+node_49b152d0 -> node_fb8be39e [color="#000000" penwidth="2"];
+node_49b152d0 -> node_e414aa30 [color="#000000" penwidth="2"];
+node_f1ccd2c2 -> node_936e2599 [color="#56B4E9" penwidth="2"];
+node_d1872147 -> node_cf923d18 [color="#CC79A7" penwidth="2"];
+node_b92f81da -> node_0f42a523 [color="#56B4E9" penwidth="2"];
+node_b92f81da -> node_a8ac0198 [color="#56B4E9" penwidth="2"];
+node_b92f81da -> node_fb8be39e [color="#56B4E9" penwidth="2"];
+node_b92f81da -> node_a151a3fa [color="#56B4E9" penwidth="2"];
+node_b92f81da -> node_8b679f51 [color="#56B4E9" penwidth="2"];
+node_b92f81da -> node_04e21a42 [color="#56B4E9" penwidth="2"];
+node_b92f81da -> node_201058ca [color="#56B4E9" penwidth="2"];
+node_b92f81da -> node_936e2599 [color="#56B4E9" penwidth="2"];
+subgraph cluster_56b37400 {
+    label="File: admin";
+    name="admin";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_3ed1158e {
+        node_acf31a65;
+        label="Class: UserQuestionAttemptAdmin";
+        name="UserQuestionAttemptAdmin";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_3008ea29 {
+    label="File: ai_assistants";
+    name="ai_assistants";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_b31e76bc {
+        node_da73e4a8;
+        label="Class: DjangoDocsAssistant";
+        name="DjangoDocsAssistant";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_219096fb {
+    label="File: claude_service";
+    name="claude_service";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_d6714e90 {
+        node_fa02e2c0 node_1158dd20 node_3dd2dd61;
+        label="Class: ClaudeService";
+        name="ClaudeService";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_7243c06a {
+    label="File: data_processor";
+    name="data_processor";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_c351c37c {
+        node_ce123c13 node_17b92d73 node_aaa0df57 node_6d4d9531 node_0d23abe5;
+        label="Class: DataProcessor";
+        name="DataProcessor";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_9bc9e543 {
+    node_0bd4066c node_08f84e8a;
+    label="File: difficulty_evaluator";
+    name="difficulty_evaluator";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_c11a3be5 {
+        node_4c359c61 node_93f9bf05 node_c07299c2 node_4769ba20 node_1d0115bb node_732fc125;
+        label="Class: DifficultyEvaluator";
+        name="DifficultyEvaluator";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_7730787c {
+    label="File: difficulty_service";
+    name="difficulty_service";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_82ec1712 {
+        node_e277b9b3 node_7d9c5d31 node_b56c6c6c node_a056063e;
+        label="Class: DifficultyEvaluationService";
+        name="DifficultyEvaluationService";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_8c0cf12c {
+    label="File: evaluate_difficulty";
+    name="evaluate_difficulty";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_cb815e3d {
+        node_f25b147f;
+        label="Class: Command";
+        name="Command";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_fce361bf {
+    label="File: grading";
+    name="grading";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_c1e7b6d6 {
+        node_0f42a523 node_a8ac0198 node_278e85b2 node_1a8e63e7 node_3394f738 node_3b183232 node_59adde53 node_6727e741 node_946ed99d node_34beafff;
+        label="Class: PythonGradingEngine";
+        name="PythonGradingEngine";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_95082996 {
+    node_0be7ae10 node_05539229;
+    label="File: instructions_difficulty_eval";
+    name="instructions_difficulty_eval";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_34283c60 {
+    node_85e53392 node_5dd68917;
+    label="File: manage";
+    name="manage";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_2b035d50 {
+    label="File: models";
+    name="models";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_daf8a7db {
+        node_fb8be39e node_8b679f51 node_04e21a42 node_a151a3fa node_cf923d18 node_e414aa30;
+        label="Class: UserProgress";
+        name="UserProgress";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_fc6f4bf7 {
+    label="File: models";
+    name="models";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_949a8d79 {
+        node_46fc326f;
+        label="Class: DjangoDocPage";
+        name="DjangoDocPage";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_2af629ce {
+    label="File: serializers";
+    name="serializers";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_4169d0d3 {
+        node_201058ca;
+        label="Class: RegisterSerializer";
+        name="RegisterSerializer";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_1bc78183 {
+    node_cd32a120 node_2efd1804;
+    label="File: urls";
+    name="urls";
+    style="filled";
+    graph[style=dotted];
+};
+subgraph cluster_b1726e30 {
+    label="File: views";
+    name="views";
+    style="filled";
+    graph[style=dotted];
+    subgraph cluster_5feb27cf {
+        node_27c86071;
+        label="Class: HybridAuthMixin";
+        name="HybridAuthMixin";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_9b405894 {
+        node_8c9aadef node_2a7830b2;
+        label="Class: BaseAIAssistantView";
+        name="BaseAIAssistantView";
+        style="filled";
+        graph[style=dotted];
+    };
+    subgraph cluster_e1383771 {
+        node_b7d8b5f2;
+        label="Class: AIAssistantChatThreadView";
+        name="AIAssistantChatThreadView";
+        style="filled";
+        graph[style=dotted];
+    };
+};
+subgraph cluster_11f3302f {
+    node_936e2599 node_d1872147 node_49b152d0 node_b92f81da node_a2bd9ad4 node_ff4cdbbb node_f1ccd2c2 node_b1ab8041 node_60ec06d3 node_bdf2da3f;
+    label="File: views";
+    name="views";
+    style="filled";
+    graph[style=dotted];
+};
+}

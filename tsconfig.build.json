@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "outDir": "./build-for-code2flow",
+    "sourceMap": false,
+    "declaration": false,
+    "removeComments": false
+  },
+  "include": ["assets/js/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx"]
+}

@@ -1,0 +1,63 @@
+Instruction,Input,Output
+Develop a program in Python which takes two inputs and returns the sum of their squares.,"5, 9","def sum_of_squares(num1, num2):
+  return num1**2 + num2**2
+
+x = 5
+y = 9
+
+print(sum_of_squares(x, y))
+# output: 106"
+Create a Python program that prints all numbers from 1 to 10 in reverse order.,,"for i in range(10, 0, -1):
+    print(i)"
+Create a Python program to automatically delete any repeated words from a given text.,The cat was was running running in the park,"text = ""The cat was running in the park""
+
+words = text.split(' ')
+unique_words = []
+
+for word in words:
+ if word not in unique_words: 
+  unique_words.append(word)
+
+print(' '.join(unique_words))"
+Write a function to find the maximum element of all the given tuple records.,,"def find_max(test_list):
+  res = max(int(j) for i in test_list for j in i)
+  return (res) "
+Generate a CPython code for reversing a given list of numbers.,"[1,2,3,4]","def reverse_list(nums):
+  return nums[::-1]"
+Create a Python program that takes a string as input and returns its top 3 most frequent characters,,"def most_frequent_chars(s):
+    d = {}
+    for i in s:
+        if i not in d:
+            d[i] = 0
+        d[i]+=1
+    d = sorted(d.items(),key = lambda x:x[1], reverse=True)
+    return [k  for k ,v in d[:3]]"
+"Utilizing the list comprehension, create a python program that removes all multiples of 3 from the input list.","[3,4,6,8,9,12]","res = [x for x in [3,4,6,8,9,12] if x % 3 != 0] 
+print(res)"
+Write a Python program to delete all occurrences of a given number from a list,"lst=[2,2,3,5,7,2,9]","def remove_all(num, lst):
+    result = []
+    for i in range(len(lst)):
+        if lst[i] != num:
+            result.append(lst[i])
+    return result"
+Generate a Python program to check if any element of a given list is palindrome or not.,"list1 = [12, 121, 3]","list1 = [12, 121, 3]
+
+# Iterate through the list
+for element in list1:
+    # Convert the element to a string
+    element = str(element)
+    
+    # Check if the element is a palindrome
+    if element == element[::-1]:
+        print(element + "" is a palindrome"")
+    else:
+        print(element + "" is not a palindrome"")"
+Create a Python program to search for a given item in a list of strings.,"[""hello"", ""world"", ""foo"", ""bar""], ""bar""","def search_for_item(strings, item):
+    for string in strings:
+        if string == item:
+            return True
+    return False"
+Write a Python program to detect cycle in a linked list using Floyd's Cycle Detection Algorithm.,,
+Implement a Stack in Python using the linked list data structure.,,
+Generate a machine learning model using Python and Scikit-Learn to predict a person's age based on height and weight.,,
+Model sentiment analysis task as a machine learning problem.,,

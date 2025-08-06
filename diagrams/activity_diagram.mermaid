@@ -1,0 +1,73 @@
+graph TB
+    %% Define styles
+    classDef userAction fill:#e1f5e1,stroke:#4caf50,stroke-width:2px
+    classDef systemAction fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
+    classDef database fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+    classDef decision fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px
+    classDef ui fill:#fce4ec,stroke:#e91e63,stroke-width:2px
+
+    %% Main Flow
+    Start([User Enters Practice Screen]):::userAction
+    
+    %% Initial Setup
+    Start --> GetUserData[(Retrieve User Data from DB)]:::database
+    GetUserData --> Greet[System Greets User by Name]:::systemAction
+    Greet --> GetInitialQ[(Get Level 3 Question from DB)]:::database
+    GetInitialQ --> DisplayQ[Display Question in Chat UI]:::ui
+    
+    %% Coding Process
+    DisplayQ --> CodeWrite[User Writes Code in Editor]:::userAction
+    CodeWrite --> TestCode[User Tests Code Output]:::userAction
+    TestCode --> ViewOutput[View Results in Output Panel]:::ui
+    ViewOutput --> MoreTests{Need More Testing?}:::decision
+    MoreTests -->|Yes| CodeWrite
+    MoreTests -->|No| Submit[User Clicks Submit]:::userAction
+    
+    %% Assessment Process
+    Submit --> GetSolution[(Retrieve Solution from DB)]:::database
+    GetSolution --> Assess[Assessment Engine Evaluates Code]:::systemAction
+    Assess --> Metrics["Apply Assessment Metrics:<br/>• Correctness (40%)<br/>• Code Quality (30%)<br/>• Efficiency (20%)<br/>• Sophistication (10%)"]:::systemAction
+    Metrics --> GenFeedback[Generate Detailed Feedback]:::systemAction
+    GenFeedback --> DisplayFeedback[Display Feedback in Chat UI]:::ui
+    
+    %% Performance Tracking
+    DisplayFeedback --> UpdatePerf[Update Performance Record]:::systemAction
+    UpdatePerf --> CheckConsec{Check Consecutive<br/>Wins/Failures}:::decision
+    
+    %% Level Adjustment Logic
+    CheckConsec -->|3 Consecutive Wins| LevelUp[Move User Up One Level]:::systemAction
+    CheckConsec -->|3 Consecutive Failures| LevelDown[Move User Down One Level]:::systemAction
+    CheckConsec -->|Mixed Results| StayLevel[Stay at Current Level]:::systemAction
+    
+    %% Next Question Selection
+    LevelUp --> UpdateLevel[(Update User Level in DB)]:::database
+    LevelDown --> UpdateLevel
+    StayLevel --> UpdateLevel
+    UpdateLevel --> GetNextQ[(Get Next Question for User's Level)]:::database
+    GetNextQ --> DisplayNext[Display Next Question]:::ui
+    
+    %% Continue Loop
+    DisplayNext --> ContinuePractice{Continue Practicing?}:::decision
+    ContinuePractice -->|Yes| CodeWrite
+    ContinuePractice -->|No| End([End Session]):::userAction
+    
+    %% Subgraphs for clarity
+    subgraph "User Interface"
+        DisplayQ
+        ViewOutput
+        DisplayFeedback
+        DisplayNext
+    end
+    
+    subgraph "Assessment System"
+        Assess
+        Metrics
+        GenFeedback
+    end
+    
+    subgraph "Level Management"
+        CheckConsec
+        LevelUp
+        LevelDown
+        StayLevel
+    end
