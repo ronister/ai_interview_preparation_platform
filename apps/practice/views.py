@@ -123,7 +123,7 @@ def set_manual_level(request):
 def get_next_question(request):
     """Get the next question based on user's manual level preference."""
     try:
-        # Demo mode: Always return question ID 266
+        # Demo mode: Always return demo question
         if settings.IS_DEMO:
             settings.IS_DEMO = False
             try:
