@@ -1,6 +1,7 @@
 import asyncio
 from urllib import request
 from django.shortcuts import render
+from django.conf import settings
 from rest_framework import status
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.permissions import IsAuthenticated
@@ -122,6 +123,36 @@ def set_manual_level(request):
 def get_next_question(request):
     """Get the next question based on user's manual level preference."""
     try:
+        # Demo mode: Always return question ID 266
+        if settings.IS_DEMO:
+            settings.IS_DEMO = False
+            try:
+                demo_question_id = int(settings.DEMO_QUESTION_ID)
+                demo_question = PythonProgrammingQuestion.objects.get(id=demo_question_id)
+                user_progress, _ = UserProgress.objects.get_or_create(
+                    user=request.user,
+                    defaults={'current_level': 3, 'manual_level': 3}
+                )
+                
+                # Assign the demo question to the user
+                user_progress.assign_question(demo_question)
+                
+                logger.info(f"Demo mode: Returning question {demo_question.id} to user {request.user.username}")
+                
+                serializer = QuestionSerializer(demo_question)
+                stats_serializer = UserStatsSerializer(user_progress)
+                
+                return Response({
+                    'question': serializer.data,
+                    'user_stats': stats_serializer.data
+                })
+            except PythonProgrammingQuestion.DoesNotExist:
+                logger.error(f"Demo question {demo_question_id} not found")
+                return Response(
+                    {'error': 'Demo question not found'},
+                    status=status.HTTP_404_NOT_FOUND
+                )
+        
         user_progress, _ = UserProgress.objects.get_or_create(
             user=request.user,
             defaults={'current_level': 3, 'manual_level': 3}

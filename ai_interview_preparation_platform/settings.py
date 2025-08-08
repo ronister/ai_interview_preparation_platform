@@ -337,3 +337,7 @@ SESSION_COOKIE_SAMESITE = 'Lax'
 SESSION_COOKIE_HTTPONLY = True
 CSRF_COOKIE_SAMESITE = 'Lax'
 CSRF_COOKIE_HTTPONLY = False  # Must be False to allow JavaScript access
+
+# Demo mode settings
+IS_DEMO = os.getenv('IS_DEMO', 'False').lower() == 'true'
+DEMO_QUESTION_ID = os.getenv('DEMO_QUESTION_ID', '266')
