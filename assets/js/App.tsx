@@ -270,12 +270,13 @@ const ExampleIndex = () => {
         </List.Item>
         <List.Item
           icon={
-            <ThemeIcon color="blue" size={28} radius="xl">
+            <ThemeIcon color="gray" size={28} radius="xl">
               <IconBubble style={{ width: rem(18), height: rem(18) }} />
             </ThemeIcon>
           }
+          style={{ opacity: 0.5 }}
         >
-          <a href="/htmx/" onClick={handleHTMXClick}>Chat Threads</a>
+          <span style={{ color: 'gray', cursor: 'not-allowed', textDecoration: 'underline' }}>Chat Threads</span>
         </List.Item>
       </List>
     </Container>
