@@ -260,7 +260,6 @@ Please respond in JSON format:
             # Call Claude API
             response_text = self.claude_service.send_message(
                 prompt=prompt,
-                max_tokens=1000,
                 temperature=0.1
             )
             
@@ -553,7 +552,6 @@ Please respond in JSON format:
             # Call Claude API
             response_text = self.claude_service.send_message(
                 prompt=prompt,
-                max_tokens=1000,
                 temperature=0.1
             )
             
@@ -759,7 +757,6 @@ Please respond in JSON format:
             # Call Claude API
             response_text = self.claude_service.send_message(
                 prompt=prompt,
-                max_tokens=1000,
                 temperature=0.1
             )
             

@@ -38,7 +38,6 @@ class DifficultyEvaluationService:
             
             response_text = self.claude_service.send_message(
                 prompt=prompt,
-                max_tokens=20000,
                 temperature=0.1
             )
             
